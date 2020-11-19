@@ -1,7 +1,7 @@
 #--- libraries: --->
-#library(data.table)
-#library(R.utils)
-#library(ggplot2)
+library(data.table)
+library(R.utils)
+library(ggplot2)
 
 #--- main function: --->
 #' @export

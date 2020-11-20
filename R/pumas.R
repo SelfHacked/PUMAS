@@ -54,7 +54,7 @@ pumas.main<-function(input_path,output_path=NULL,beta_header,af_header,se_header
 
 #---plot function: --->
 FunI.plot<-function(Res_TildeRL,p.value,input_path,output_path){
-  png(paste0(output_path),units="in",width = 9,height = 5,res = 300, type = "Xlib")
+  png(paste0(output_path)) #,units="in",width = 9,height = 5,res = 300, type = "Xlib")
   plot(y=Res_TildeRL,x=log(p.value,base=10),main=paste0(input_path),ylab="R^2",xlab="log(P-value)")
   points(y=max(Res_TildeRL),x=log(p.value,base=10)[which(Res_TildeRL==max(Res_TildeRL))],col="red", pch=19)
   abline(v=log(p.value,base=10)[which(Res_TildeRL==max(Res_TildeRL))],col="red",lty=2)
